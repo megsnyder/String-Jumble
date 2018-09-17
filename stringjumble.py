@@ -1,7 +1,7 @@
 """
 stringjumble.py
 Author: Meg
-Credit: Snyder
+Credit: Noah
 
 Assignment:
 
@@ -29,5 +29,11 @@ text = input('Please enter a string of text (the bigger the better): ')
 print('You entered ''. Now jumble it:')
 letter = list(text)
 num = len(text)
-reverse = (letter[num:0:-1])
-print(reverse)
+reverse = (letter[num::-1])
+word = (letter[0:num])
+first = ""
+second= ""
+for i in reverse:
+    first += i
+print(first)
+print(word)
