@@ -32,8 +32,11 @@ num = len(text)
 reverse = (letter[num::-1])
 word = (letter[0:num])
 first = ""
-second= ""
+second = ""
+third = ""
+fourth = ""
 a = 1
+b = -1
 for i in reverse:
     first += i
 print(first)
@@ -41,5 +44,12 @@ for i in reverse:
     a+=1
     second += i
     if i == " ":
-        print(letter[num-(a-2):num])
-        print(letter[0:num-(a-2)])
+        well = letter[num-(a-1):num-(b):]
+        b+=len(well)
+        for i in well:
+            third += i
+print(third)
+fine = letter[0:num-(b):]
+for i in fine:
+    fourth += i
+print(fourth)
