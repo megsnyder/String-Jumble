@@ -33,7 +33,13 @@ reverse = (letter[num::-1])
 word = (letter[0:num])
 first = ""
 second= ""
+a = 1
 for i in reverse:
     first += i
 print(first)
-print(word)
+for i in reverse:
+    a+=1
+    second += i
+    if i == " ":
+        print(letter[num-(a-2):num])
+        print(letter[0:num-(a-2)])
