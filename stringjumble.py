@@ -55,12 +55,15 @@ for i in fine:
     fourth += i
 print(third + " " + fourth)
 c = -1
-d = -1
+d = 0
 for i in word:
     c+=1
     if i == " ":
-        okay = letter[c+(d):d:-1]
-        d+=1
+        okay = letter[c:d:-1]
+        d+=len(okay)
         for i in okay:
             sixth += i
-print(sixth)
+sure = letter[num:d:-1]
+for i in sure:
+    seventh += i
+print(sixth + " " + seventh)
