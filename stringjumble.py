@@ -43,6 +43,7 @@ b = -1
 for i in reverse:
     first += i
 print(first)
+
 for i in reverse:
     a+=1
     if i == " ":
@@ -54,9 +55,10 @@ fine = letter[0:num-(b):]
 for i in fine:
     fourth += i
 print(third + " " + fourth)
+
 c = -1
 d = 0
-for i in word:
+for i in letter:
     c+=1
     if i == " ":
         okay = letter[c:d:-1]
