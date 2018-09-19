@@ -28,9 +28,15 @@ erehT era a wef seuqinhcet ro skcirt taht uoy yam dnif ydnah
 text = input('Please enter a string of text (the bigger the better): ')
 print('You entered ''. Now jumble it:')
 letter = list(text)
+spaceb = " " + text
+spacee = text + " "
 num = len(text)
 reverse = (letter[num::-1])
-word = (letter[:num:1])
+if letter[num-1] != " ":
+    letter1 = list(spacee)
+if letter[0] != " ":
+    letter2 = list(spaceb)
+
 first = ""
 
 third = ""
@@ -39,7 +45,7 @@ fourth = ""
 sixth = ""
 seventh = ""
 a = 0
-b = -1
+b = 0
 for i in reverse:
     first += i
 print(first)
@@ -47,25 +53,25 @@ print(first)
 for i in reverse:
     a+=1
     if i == " ":
-        well = letter[num-(a):num-(b):]
+        well = letter1[num-(a):num-(b):]
         b+=len(well)
         for i in well:
             third += i
-fine = letter[0:num-(b):]
+fine = letter1[0:num-(b):]
 for i in fine:
     fourth += i
 print(third + " " + fourth)
 
-c = -1
+c = 0
 d = 0
 for i in letter:
     c+=1
     if i == " ":
-        okay = letter[c:d:-1]
+        okay = letter2[c:d:-1]
         d+=len(okay)
         for i in okay:
             sixth += i
-sure = letter[num:d:-1]
+sure = letter2[num:d:-1]
 for i in sure:
     seventh += i
 print(sixth + " " + seventh)
